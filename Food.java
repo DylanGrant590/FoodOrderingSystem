@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Food {
@@ -66,7 +67,7 @@ public class Food {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+			try {
         	System.out.println("***********************************************");
         	System.out.println("Please enter a number from the following menu: ");
         	  System.out.println("1) Beef Patty.\n" +
@@ -255,17 +256,22 @@ public class Food {
             	display();
             }
             else if (input == 21) {
-            System.out.println("-------------------------------------");
+        	System.out.println("-------------------------------------");
             System.out.println("Thank you for doing business with us!"); 
             System.out.println("-------------------------------------"); 
             System.exit(0);
             scanner.close();
             }
-            
             else {
                 System.out.println("\nInvalid Input. Please Try Again!");
                 System.out.println("");
                 display();
-        	}
+                }
+             
+            } catch (InputMismatchException ex) {
+	            System.out.println("\nCannot Enter Letters! " + ex);
+	            System.out.println("");
+	            display();
         }
 	}
+}
