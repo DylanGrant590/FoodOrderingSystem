@@ -255,9 +255,9 @@ public class Food {
             	display();
             }
             else if (input == 21) {
-        	System.out.println("---------------------------------------");
-            System.out.println("\nThank you for doing business with us!"); 
-            System.out.println("---------------------------------------"); 
+            System.out.println("-------------------------------------");
+            System.out.println("Thank you for doing business with us!"); 
+            System.out.println("-------------------------------------"); 
             System.exit(0);
             scanner.close();
             }
